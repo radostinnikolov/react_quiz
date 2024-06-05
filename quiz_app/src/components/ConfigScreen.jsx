@@ -31,7 +31,7 @@ export default function ConfigScreen( { onConfig }) {
             <h1 className="mb-14 text-4xl font-extrabold leading-none tracking-tight text-teal-900 md:text-5xl lg:text-6xl dark:text-white">Configure your quiz</h1>
 
             <label htmlFor="number" className="block mb-2 text-base font-medium text-gray-900 dark:text-white">Choose number of questions:</label>
-            <input type="number" name="number" defaultValue={1} min={1} max={50} className="block w-1/3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
+            <input type="number" name="number" defaultValue={1} min={1} max={50} className="block w-1/3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
 
             <SelectInput id='category'>
             {categories ? categories.map((item) => <option key={item.id} value={item.id}>{item.name}</option>) : <option value='loading...'>loading...</option>}
