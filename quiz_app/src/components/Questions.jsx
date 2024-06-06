@@ -30,18 +30,15 @@ export default function Questions( {configData} ) {
             }
             userAnswers.current.push(answer)
             setCurrentQuestionIndex((prevState) => prevState + 1)
-        }, 3000)
+        }, 2500)
         
     }
 
     return (
         <>
-        <div>
         {!questions ? <h1>loading</h1> : undefined}
         {questions && !isFinished ? <Question key={currentQuestionIndex} questionObj={questions[currentQuestionIndex]} onAnswer={handleAnswer}/> : undefined}
-        {isFinished && <Result userAnswers={userAnswers.current} correctAnswers={questions.map(item => item['correct_answer'])}/>}
-        </div>
-        
+        {isFinished && <Result userAnswers={userAnswers.current} correctAnswers={questions.map(item => item['correct_answer'])} questions={questions}/>}
         </>
     )
 }

@@ -20,7 +20,7 @@ function App() {
   }
 
   return (
-    <div className="h-screen bg-gradient-to-r from-green-100 via-green-300 to-green-700">
+    <div className="min-h-screen bg-gradient-to-r from-green-100 via-green-300 to-green-700 flex-col justify-center items-center text-center">
         <NavigationBar />
         {!gameHasStarted && !config ? <StartingScreen onStart={handleGameStart}/> : undefined}
         {gameHasStarted && !config ? <ConfigScreen onConfig={handleConfig}/> : undefined}
